@@ -6,7 +6,7 @@ const generator = require('./generator');
 app.get('/text', function(req, res) {
   var paragraphs = req.query.paragraphs ? parseInt(req.query.paragraphs) : 3;
   var paragraphSize = req.query.paragraphSize ? parseInt(req.query.paragraphSize) : 3;
-  let text = generator.text(paragraphs, paragraphSize);
+  let text = generator.html(paragraphs, paragraphSize);
   res.send(text);
 });
 
