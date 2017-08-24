@@ -5,7 +5,7 @@ const generator = require('./generator');
 
 app.get('/text', function(req, res) {
   console.log('generating');
-  let text = generator(3,3);
+  let text = generator.text(3,3);
   console.log(text);
   res.send(text);
 });
