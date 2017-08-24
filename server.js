@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const staticPages = require('express-static');
-const generator = require('./lyrics');
+const generator = require('./generator');
 
 app.get('/text', function(req, res) {
   console.log('generating');

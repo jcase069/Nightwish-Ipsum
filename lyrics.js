@@ -1,4 +1,6 @@
-const lyrics = [
+module.exports = [
+  // ENDLESS FORMS MOST BEAUTIFUL
+  // Shudder Before the Beautiful
   'The deepest solace lies in understanding. This ancient unseen stream, a shudder before the beautiful.',
   'Awake, oceanborn!',
   'Behold this force!',
@@ -10,6 +12,7 @@ const lyrics = [
   'The unknown, the grand show, the choir of the stars.',
   'Interstellar theatre play, the nebulae curtain falls.',
   'Imagination, evolution, a species from the vale walks in wonder in search of the source of the tale.',
+  // Weak Fantasy
   `These stories given to us all are filled with sacrifice and robes of lust.`,
   `Dissonant choirs and downcast eyes, selfhood of a condescending ape.`,
   `Behold the crown of a heavenly spy, forged in blood of those who defy!`,
@@ -22,6 +25,7 @@ const lyrics = [
   `A storytelling breed we are -- a starving crew with show-off toys.`,
   `From words into war of the worlds, this one we forsake with scorn from lies the strength of our love: mother’s milk, laced with poison for this newborn.`,
   `Wake up child, I have a story to tell: "Once upon a time..."`,
+  // Élan
   `Leave the sleep and let the springtime talk in tongues from the time before man.`,
   `Listen to a daffodil tell her tale.`,
   `Let the guest in, walk out, be the first to greet the morn.`,
@@ -41,29 +45,21 @@ const lyrics = [
   `Come, drink deep, let the dam of mind seep.`,
   `Travel with great élan; dance a jig at the funeral.`,
   `Come!`,
+  // Yours Is an Empty Hope
+  `Tear me to bits, enjoy the scene of screen name verbal vanity.`,
+  `Churning the words imbued in filth, your tongue oily water under my bridge.`,
+  `You have the world, it’s all for you.`,
+  `I wish you’d find the lost in you -- grateful for the pain, it proves we’re alive.`,
+  `Can you feel it?`,
+  `I can’t make you want the truth -- it’s up to you.`,
+  `Yours is an empty hope.`,
+  `Feed me to pigs in your fantasies.`,
+  `Your sea roars bitter elegies, like Narcissus who bribes the pool.`,
+  `A hollow voice, ruin with a roof.`,
+  `Stop!`,
+  `Life is now, still all for you.`,
+  `Turn from the hate; turn from the smoke.`,
+  `I see the parchment of your soul, the notes, the song.`,
+  `Join your voice!`,
+  `I can let you have the world; it’s all for you.`,
 ];
-
-function randomParagraphSize(avgParagraphSize) {
-  return Math.floor(Math.random() * (avgParagraphSize * 2 - 1)) + 1;
-}
-
-function randomLyric() {
-  return lyrics[Math.floor(Math.random() * lyrics.length)];
-}
-
-function generateParagraph(avgParagraphSize) {
-  let paragraphSize = randomParagraphSize(avgParagraphSize);
-  let text = '<pre>'+randomLyric();
-  for (let i=1; i<paragraphSize; ++i) {
-    text += ' ' + randomLyric();
-  }
-  return text+'</pre>';
-}
-
-module.exports = function(paragraphs, avgParagraphSize) {
-  let text = generateParagraph(avgParagraphSize);
-  for (let i=1; i<paragraphs; ++i) {
-    text += '\n\n'+generateParagraph(avgParagraphSize);
-  }
-  return text;
-}
