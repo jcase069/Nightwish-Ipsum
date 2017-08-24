@@ -1,8 +1,29 @@
 <html>
   <head>
     <title>Nightwish Ipsum</title>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <h3>Nightwish Ipsum</h3>
+    <p>Write the lyrics for a song <em>even you</em> won't understand!</p>
+    <form action="">
+      <div>
+        <label for="paragraphs">How many paragraphs?</label>
+        <input type="text" name="paragraphs" id="paragraphs" value="3" />
+      </div>
+      <div>
+        <label for="paragraph-size">How many sentences in a paragraph, on average?</label>
+        <input type="text" name="paragraph-size" id="paragraph-size" value="3" />
+      </div>
+      <button id="generate-button" type="button">
+        Generate!
+      </button>
+    </form>
+    <div id='result-text'>
+    </div>
+    <div>
+      <img src="img/Nightwish2015a_web-4.jpg" alt="Nightwish Band" align="center" />
+    </div>
+    <script type='text/javascript' src='/js/main.js'></script>
   </body>
 </html>
